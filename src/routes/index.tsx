@@ -1,24 +1,72 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { HeaderLogo, UrgencyBanner } from "@/components/landing/Header";
+import { HeroSection } from "@/components/landing/Hero";
+import { ResultsProofSection } from "@/components/landing/Results";
+import {
+  PainAgitationSection,
+  SolutionBridgeSection,
+  BenefitsSection,
+} from "@/components/landing/Pain";
+import {
+  DeliverablesSection,
+  DeliverablesSummarySection,
+} from "@/components/landing/Deliverables";
+import {
+  AudienceFitSection,
+  OfferStackSection,
+  OfferCardSection,
+  AccessStepsSection,
+  ChoiceSection,
+  AuthoritySection,
+} from "@/components/landing/Offer";
+import { FaqSection, LegalFooter } from "@/components/landing/Faq";
+import { offer } from "@/config/offer";
+
+const title = "Mega Aulão ao Vivo sobre Leilões — Paulo Machado";
+const description =
+  "Copie a estratégia para comprar imóveis e veículos no leilão com 25% de entrada + 60x no boleto e até 60% de desconto. Aula ao vivo hoje 20h01 por R$ 29,90.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
+    <main className="overflow-x-hidden bg-brand-light">
+      <HeaderLogo />
+      <UrgencyBanner />
+      <HeroSection />
+      <ResultsProofSection />
+      <PainAgitationSection />
+      <SolutionBridgeSection />
+      <BenefitsSection />
+      <DeliverablesSection />
+      <DeliverablesSummarySection variant="top" />
+      <AudienceFitSection />
+      <OfferStackSection />
+      <OfferCardSection ctaLabel={offer.ctaPrimary} />
+      <AccessStepsSection />
+      <ChoiceSection />
+      <AuthoritySection />
+      <DeliverablesSummarySection variant="bottom" />
+      <OfferCardSection
+        id="oferta-final"
+        ctaLabel={offer.ctaSecondary}
+        note="Mega aulão ao vivo sobre leilões — acesso imediato no seu e-mail."
       />
-    </div>
+      <FaqSection />
+      <LegalFooter />
+    </main>
   );
 }
