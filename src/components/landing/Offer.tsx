@@ -1,4 +1,5 @@
 import { assets } from "@/lib/landing-assets";
+import logoAoVivo from "@/assets/logo-mega-aulao-ao-vivo.png.asset.json";
 import { offer } from "@/config/offer";
 import { Cta } from "./Cta";
 import {
@@ -206,7 +207,7 @@ export function AccessStepsSection() {
     <section className="bg-brand-light py-14 sm:py-20">
       <div className="container-wide">
         <h2 className="text-center text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
-          Compre agora e receba seu acesso no e-mail imediatamente!
+          Como funciona o seu acesso ao aulão
         </h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {steps.map(({ icon: Icon, title, desc }) => (
