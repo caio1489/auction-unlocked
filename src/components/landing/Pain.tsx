@@ -1,5 +1,5 @@
 import { assets } from "@/lib/landing-assets";
-import { AlertTriangle, KeyRound, Home, Car, TrendingUp } from "lucide-react";
+import { AlertTriangle, KeyRound, Home, Car, TrendingUp, ChevronDown } from "lucide-react";
 
 export function PainAgitationSection() {
   return (
@@ -73,23 +73,29 @@ const benefits = [
 
 export function BenefitsSection() {
   return (
-    <section className="bg-brand-light py-14 sm:py-20">
+    <section className="relative bg-brand-light pb-20 pt-14 sm:pt-20">
       <div className="container-wide">
         <h2 className="text-center text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-light">
           Com um <span className="hl">aulão ao vivo</span> você vai
         </h2>
-        <div className="mx-auto mt-8 grid max-w-[860px] gap-4 sm:grid-cols-2">
+        <div className="mx-auto mt-8 grid max-w-[730px] gap-4 sm:grid-cols-2">
           {benefits.map(({ icon: Icon, text }) => (
             <div
               key={text}
-              className="flex flex-col items-center gap-4 rounded-3xl border border-brand-border bg-white px-6 py-8 text-center"
+              className="flex flex-col items-center gap-3 rounded-2xl border border-brand-border bg-white px-6 py-7 text-center"
             >
-              <Icon aria-hidden className="size-9 text-brand-accent" strokeWidth={2.2} />
-              <p className="text-base font-bold text-brand-on-light">{text}</p>
+              <Icon aria-hidden className="size-8 text-brand-accent" strokeWidth={2.4} />
+              <p className="text-[15px] font-bold leading-snug text-brand-on-light">{text}</p>
             </div>
           ))}
         </div>
       </div>
+      <span
+        aria-hidden
+        className="absolute -bottom-6 left-1/2 grid size-12 -translate-x-1/2 place-items-center rounded-full bg-brand-accent ring-8 ring-white"
+      >
+        <ChevronDown className="size-6 text-brand-on-dark" strokeWidth={3} />
+      </span>
     </section>
   );
 }
