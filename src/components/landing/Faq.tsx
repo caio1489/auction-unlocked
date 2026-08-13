@@ -58,10 +58,6 @@ export function LegalFooter() {
           height={70}
           className="h-auto w-[180px] object-contain"
         />
-        <p className="text-sm font-semibold">
-          Tem alguma dúvida? Mande pelo e-mail:{" "}
-          <span className="hl break-all">{offer.contactEmail}</span>
-        </p>
         <p className="text-xs leading-relaxed text-brand-on-dark/60">
           Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. A compra deste
           material não garante nenhum tipo de resultado. Todos os resultados apresentados dependem

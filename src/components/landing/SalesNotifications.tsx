@@ -77,7 +77,7 @@ const buyers: [string, string][] = [
 const rand = (min: number, max: number) => min + Math.random() * (max - min);
 
 export function SalesNotifications() {
-  const [index, setIndex] = useState(() => Math.floor(Math.random() * buyers.length));
+  const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -85,9 +85,9 @@ export function SalesNotifications() {
     let shown = 0;
 
     const nextGap = () => {
-      // 2ª notificação: intervalo fixo maior; da 3ª em diante, aleatório
-      if (shown === 1) return 22000;
-      return rand(25000, 55000);
+      // 2ª notificação: 8s após a primeira; da 3ª em diante: 6s-11s aleatórios
+      if (shown === 1) return 8000;
+      return rand(6000, 11000);
     };
 
     const show = () => {
