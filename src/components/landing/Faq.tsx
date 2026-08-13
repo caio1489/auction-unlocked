@@ -18,7 +18,7 @@ export function FaqSection() {
   return (
     <section className="bg-brand-light py-14 sm:py-20">
       <div className="container-reading">
-        <h2 className="text-center text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-light">
+        <h2 className="text-center text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
           Perguntas frequentes
         </h2>
         <div className="mt-8 flex flex-col gap-3">

@@ -8,7 +8,7 @@ export function PainAgitationSection() {
         <span className="inline-flex rounded-full bg-brand-dark px-5 py-2 text-sm font-bold text-brand-on-dark">
           Fala a verdade…
         </span>
-        <h2 className="mt-6 text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-light">
+        <h2 className="mt-6 text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
           Você já quis fazer sua primeira arrematação, mas{" "}
           <span className="hl">trava na hora de dar o lance!</span>
         </h2>
@@ -75,7 +75,7 @@ export function BenefitsSection() {
   return (
     <section className="relative bg-brand-light pb-20 pt-14 sm:pt-20">
       <div className="container-wide">
-        <h2 className="text-center text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-light">
+        <h2 className="text-center text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
           Com um <span className="hl">aulão ao vivo</span> você vai
         </h2>
         <div className="mx-auto mt-8 grid max-w-[730px] gap-4 sm:grid-cols-2">

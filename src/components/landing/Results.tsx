@@ -31,7 +31,7 @@ export function ResultsProofSection() {
   return (
     <section className="bg-white py-14 sm:py-20">
       <div className="container-reading text-center">
-        <h2 className="text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-light">
+        <h2 className="text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
           Veja <span className="hl">resultados reais</span> de quem já aplicou esse método e
           comprou parcelado no leilão.
         </h2>
