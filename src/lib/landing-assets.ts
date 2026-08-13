@@ -15,6 +15,7 @@ import entParcelado from "@/assets/ent-parcelado.webp.asset.json";
 import entLeilaoFalso from "@/assets/ent-leilao-falso.png.asset.json";
 import entCarros from "@/assets/ent-carros.png.asset.json";
 import entImoveis from "@/assets/ent-imoveis-desocupados.png.asset.json";
+import doresObjecoes from "@/assets/dores-objecoes.png.asset.json";
 
 /**
  * Mapa dos ativos originais do ZIP -> URL no projeto.
@@ -39,4 +40,5 @@ export const assets = {
   "entregavel-como-identificar-leilao-falso-3-linhas.png": entLeilaoFalso.url,
   "entregavel-carros-titulo.png": entCarros.url,
   "entregavel-comprar-imoveis-desocupados-verde.png": entImoveis.url,
+  "dores-objecoes.png": doresObjecoes.url,
 } as const;

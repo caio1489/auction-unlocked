@@ -3,15 +3,15 @@ import { offer } from "@/config/offer";
 
 export function HeaderLogo() {
   return (
-    <header className="bg-white py-5">
+    <header className="bg-white py-3">
       <div className="container-wide flex justify-center">
         <img
           src={assets["Logo sem fundo da pagina.png"]}
           alt="Logo Mega Aulão ao Vivo sobre Leilões"
-          width={320}
-          height={96}
+          width={260}
+          height={72}
           loading="eager"
-          className="h-auto w-[min(100%,260px)] object-contain sm:w-[300px]"
+          className="h-auto w-[min(100%,170px)] object-contain sm:w-[200px]"
         />
       </div>
     </header>
@@ -20,15 +20,13 @@ export function HeaderLogo() {
 
 export function UrgencyBanner() {
   return (
-    <div className="w-full bg-brand-accent py-4 text-brand-on-dark">
-      <div className="container-wide flex flex-col items-center gap-1 text-center sm:flex-row sm:justify-center sm:gap-3">
-        <span className="text-base font-extrabold uppercase tracking-wide sm:text-lg">
+    <div className="w-full bg-linear-to-r from-brand-accent to-brand-accent-strong py-2.5 text-brand-on-dark">
+      <div className="container-wide flex flex-wrap items-center justify-center gap-x-2 gap-y-0 text-center">
+        <span className="text-sm font-bold sm:text-base">
           {offer.liveLabel}
         </span>
-        <span aria-hidden className="hidden sm:inline">
-          —
-        </span>
-        <span className="text-base font-bold sm:text-lg">{offer.liveTime}</span>
+        <span aria-hidden>—</span>
+        <span className="text-sm font-bold sm:text-base">{offer.liveTime}</span>
       </div>
     </div>
   );
