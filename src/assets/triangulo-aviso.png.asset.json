@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "4b40d680-782c-45da-b551-fcd6ff1f0d10",
-  "project_id": "b67f4b5c-d4c7-4078-b8ff-40f0558ffb3e",
-  "url": "/__l5e/assets-v1/4b40d680-782c-45da-b551-fcd6ff1f0d10/triangulo-aviso.png",
-  "r2_key": "a/v1/b67f4b5c-d4c7-4078-b8ff-40f0558ffb3e/4b40d680-782c-45da-b551-fcd6ff1f0d10/triangulo-aviso.png",
-  "original_filename": "triangulo-aviso.png",
-  "size": 1429347,
   "content_type": "image/png",
-  "created_at": "2026-08-13T19:38:05Z"
+  "created_at": "2026-08-13T19:38:05Z",
+  "original_filename": "triangulo-aviso.png",
+  "project_id": "c1a58e92-c6dc-493d-aa20-11ef222b19f1",
+  "r2_key": "a/v1/c1a58e92-c6dc-493d-aa20-11ef222b19f1/4b40d680-782c-45da-b551-fcd6ff1f0d10/triangulo-aviso.png",
+  "size": 1429347,
+  "url": "/__l5e/assets-v1/4b40d680-782c-45da-b551-fcd6ff1f0d10/triangulo-aviso.png",
+  "version": 1
 }

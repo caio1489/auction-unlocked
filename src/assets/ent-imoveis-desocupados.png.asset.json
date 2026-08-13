@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "10d2c701-f152-496c-a8f7-feebc4ede91b",
-  "project_id": "b67f4b5c-d4c7-4078-b8ff-40f0558ffb3e",
-  "url": "/__l5e/assets-v1/10d2c701-f152-496c-a8f7-feebc4ede91b/ent-imoveis-desocupados.png",
-  "r2_key": "a/v1/b67f4b5c-d4c7-4078-b8ff-40f0558ffb3e/10d2c701-f152-496c-a8f7-feebc4ede91b/ent-imoveis-desocupados.png",
-  "original_filename": "ent-imoveis-desocupados.png",
-  "size": 5644539,
   "content_type": "image/png",
-  "created_at": "2026-08-13T18:07:31Z"
+  "created_at": "2026-08-13T18:07:31Z",
+  "original_filename": "ent-imoveis-desocupados.png",
+  "project_id": "c1a58e92-c6dc-493d-aa20-11ef222b19f1",
+  "r2_key": "a/v1/c1a58e92-c6dc-493d-aa20-11ef222b19f1/10d2c701-f152-496c-a8f7-feebc4ede91b/ent-imoveis-desocupados.png",
+  "size": 5644539,
+  "url": "/__l5e/assets-v1/10d2c701-f152-496c-a8f7-feebc4ede91b/ent-imoveis-desocupados.png",
+  "version": 1
 }
