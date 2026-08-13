@@ -245,9 +245,9 @@ export function ChoiceSection() {
               <div className="flex items-center gap-4">
                 <span
                   aria-hidden
-                  className="grid size-14 shrink-0 place-items-center rounded-full bg-brand-light"
+                  className="grid size-20 shrink-0 place-items-center rounded-full bg-brand-light"
                 >
-                  <Frown className="size-8 text-brand-on-light/60" strokeWidth={2} />
+                  <Frown className="size-11 text-brand-on-light/55" strokeWidth={2} />
                 </span>
                 <div>
                   <span className="inline-flex rounded-full bg-brand-on-light/70 px-3.5 py-1 text-xs font-bold text-brand-on-dark">
@@ -275,9 +275,9 @@ export function ChoiceSection() {
               <div className="flex items-center gap-4">
                 <span
                   aria-hidden
-                  className="grid size-14 shrink-0 place-items-center rounded-2xl bg-brand-accent"
+                  className="grid size-20 shrink-0 place-items-center rounded-3xl bg-brand-accent"
                 >
-                  <Check className="size-8 text-brand-on-dark" strokeWidth={3.5} />
+                  <Check className="size-12 text-brand-on-dark" strokeWidth={3.5} />
                 </span>
                 <div>
                   <span className="inline-flex rounded-full bg-brand-accent px-3.5 py-1 text-xs font-bold text-brand-on-dark">
