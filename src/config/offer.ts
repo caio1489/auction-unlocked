@@ -9,7 +9,10 @@ export const offer = {
   liveLabel: "Aula ao vivo",
   liveTime: "Hoje 20h01",
   price: "R$ 29,90",
+  priceValue: 29.9,
+  currency: "BRL",
   anchorTotal: "R$ 335",
+
   ctaPrimary: "Quero reservar minha vaga",
   ctaSecondary: "Quero participar",
   checkoutUrl: "https://pay.kiwify.com.br/cJlTXvi",

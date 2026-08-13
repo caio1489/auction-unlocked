@@ -24,7 +24,9 @@ import {
 import { FaqSection, LegalFooter } from "@/components/landing/Faq";
 import { LotesSection } from "@/components/landing/Lotes";
 import { SalesNotifications } from "@/components/landing/SalesNotifications";
+import { PixelEvents } from "@/components/landing/PixelEvents";
 import { offer } from "@/config/offer";
+
 
 const title = "Mega Aulão ao Vivo sobre Leilões — Paulo Machado";
 const description =
@@ -68,6 +70,8 @@ function Index() {
       <FaqSection />
       <LegalFooter />
       <SalesNotifications />
+      <PixelEvents />
+
     </main>
   );
 }
