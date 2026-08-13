@@ -50,12 +50,12 @@ export function AudienceFitSection() {
 
 export function FinalPitchSection() {
   return (
-    <section className="bg-linear-to-b from-[#2b2a2a] to-black py-16 text-brand-on-dark sm:py-24">
+    <section className="bg-linear-to-b from-[#2b2a2a] to-black py-7 text-brand-on-dark sm:py-9">
       <div className="container-reading text-center">
-        <span className="inline-flex rounded-full bg-brand-accent px-6 py-2.5 text-sm font-bold text-brand-on-dark">
+        <span className="inline-flex rounded-full bg-brand-accent px-6 py-2 text-sm font-bold text-brand-on-dark">
           Enfim…
         </span>
-        <p className="mx-auto mt-6 max-w-[620px] text-[clamp(1.5rem,4.6vw,2.3rem)] font-extrabold leading-tight">
+        <p className="mx-auto mt-4 max-w-[620px] text-[clamp(1.4rem,4.4vw,2.1rem)] font-extrabold leading-tight">
           Se você quer destravar sua primeira arrematação ainda esse mês, esse{" "}
           <span className="hl">aulão ao vivo é pra você.</span>
         </p>
@@ -81,33 +81,44 @@ export function OfferStackSection() {
           <span className="hl">aulão ao vivo sobre leilão</span>
         </h2>
 
-        <div className="mt-8 rounded-[28px] border border-brand-border bg-white px-5 py-6 sm:px-8">
-          <ul className="flex flex-col divide-y divide-brand-border">
-            {stack.map(([label, value]) => (
+        <div className="mt-8 overflow-hidden rounded-[28px] border-2 border-brand-border bg-white shadow-[0_28px_60px_-42px_rgba(0,0,0,0.45)]">
+          <ul className="flex flex-col">
+            {stack.map(([label, value], i) => (
               <li
                 key={label}
-                className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4"
+                className={`flex flex-col gap-2 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-7 ${
+                  i % 2 === 1 ? "bg-brand-light/70" : "bg-white"
+                }`}
               >
-                <span className="flex min-w-0 items-start gap-2 text-sm font-semibold text-brand-on-light sm:text-base">
-                  <span aria-hidden className="mt-0.5 font-black text-brand-accent">
+                <span className="flex min-w-0 items-start gap-3">
+                  <span
+                    aria-hidden
+                    className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-brand-accent text-[13px] font-black text-brand-on-dark"
+                  >
                     ✓
                   </span>
-                  {label}
+                  <span className="text-[1.05rem] font-bold leading-snug text-brand-on-light sm:text-xl">
+                    {label}
+                  </span>
                 </span>
-                <span className="shrink-0 text-sm font-bold text-brand-on-light/50 line-through sm:text-base">
+                <span className="ml-9 shrink-0 rounded-full bg-brand-light px-3.5 py-1.5 text-base font-extrabold text-brand-on-light/50 line-through sm:ml-0 sm:text-lg">
                   {value}
                 </span>
               </li>
             ))}
           </ul>
+
+          <div className="flex flex-col items-center gap-1 border-t-2 border-dashed border-brand-border bg-brand-on-light px-5 py-6 text-center">
+            <span className="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-on-dark/60">
+              Tudo isso deveria custar
+            </span>
+            <span className="text-[clamp(1.9rem,7vw,2.6rem)] font-extrabold leading-none text-brand-on-dark line-through">
+              {offer.anchorTotal}
+            </span>
+          </div>
         </div>
 
-        <p className="mx-auto mt-6 w-fit rounded-full border border-brand-border bg-white px-6 py-3 text-center text-base font-bold text-brand-on-light sm:text-lg">
-          Tudo isso deveria custar:{" "}
-          <span className="text-brand-on-light/50 line-through">{offer.anchorTotal}</span>
-        </p>
-
-        <p className="mt-8 text-center text-[clamp(1.1rem,3vw,1.5rem)] font-extrabold text-brand-on-light">
+        <p className="mt-8 text-center text-[clamp(1.15rem,3.2vw,1.55rem)] font-extrabold text-brand-on-light">
           Mas, somente hoje, você pode ter acesso ao mega aulão sobre leilões por um valor muito
           mais acessível:
         </p>
@@ -115,6 +126,7 @@ export function OfferStackSection() {
     </section>
   );
 }
+
 
 export function OfferCardSection({
   id,
