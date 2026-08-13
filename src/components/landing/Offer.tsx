@@ -24,27 +24,25 @@ const audience = [
 
 export function AudienceFitSection() {
   return (
-    <section className="bg-linear-to-b from-[#3a3838] to-brand-dark py-14 text-brand-on-dark sm:py-20">
-      <div className="container-reading">
-        <h2 className="text-center text-[clamp(1.4rem,4vw,2.1rem)]">
-          Esse <span className="hl">aulão ao vivo</span> é para você que:
-        </h2>
-        <ul className="mt-8 flex flex-col gap-3">
-          {audience.map((a) => (
-            <li
-              key={a}
-              className="flex items-start gap-3 rounded-2xl bg-white/5 px-5 py-4 text-base font-medium"
-            >
-              <span
-                aria-hidden
-                className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-brand-accent text-xs font-black text-brand-on-dark"
-              >
-                ✓
-              </span>
-              {a}
-            </li>
-          ))}
-        </ul>
+    <section className="bg-linear-to-b from-[#3a3838] to-black py-14 text-brand-on-dark sm:py-20">
+      <div className="container-wide">
+        <div className="rounded-[32px] bg-[#1b1a1a] px-6 py-10 shadow-[0_30px_60px_-40px_rgba(0,0,0,0.9)] sm:px-12 sm:py-12">
+          <h2 className="text-center text-[clamp(1.4rem,4vw,2.1rem)]">
+            Esse <span className="hl">aulão ao vivo</span> é para você que:
+          </h2>
+          <ul className="mx-auto mt-8 flex max-w-[820px] flex-col gap-4">
+            {audience.map((a) => (
+              <li key={a} className="flex items-start gap-3 text-base text-brand-on-dark/90">
+                <Check
+                  aria-hidden
+                  className="mt-1 size-4 shrink-0 text-brand-accent"
+                  strokeWidth={4}
+                />
+                <span>{a}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
@@ -52,7 +50,7 @@ export function AudienceFitSection() {
 
 export function FinalPitchSection() {
   return (
-    <section className="bg-linear-to-b from-brand-dark to-[#141313] py-16 text-brand-on-dark sm:py-20">
+    <section className="bg-linear-to-b from-[#2b2a2a] to-black py-16 text-brand-on-dark sm:py-24">
       <div className="container-reading text-center">
         <span className="inline-flex rounded-full bg-brand-accent px-6 py-2.5 text-sm font-bold text-brand-on-dark">
           Enfim…
@@ -247,9 +245,9 @@ export function ChoiceSection() {
               <div className="flex items-center gap-4">
                 <span
                   aria-hidden
-                  className="grid size-14 shrink-0 place-items-center rounded-full bg-brand-light"
+                  className="grid size-20 shrink-0 place-items-center rounded-full bg-brand-light"
                 >
-                  <Frown className="size-8 text-brand-on-light/60" strokeWidth={2} />
+                  <Frown className="size-11 text-brand-on-light/55" strokeWidth={2} />
                 </span>
                 <div>
                   <span className="inline-flex rounded-full bg-brand-on-light/70 px-3.5 py-1 text-xs font-bold text-brand-on-dark">
@@ -277,9 +275,9 @@ export function ChoiceSection() {
               <div className="flex items-center gap-4">
                 <span
                   aria-hidden
-                  className="grid size-14 shrink-0 place-items-center rounded-2xl bg-brand-accent"
+                  className="grid size-20 shrink-0 place-items-center rounded-3xl bg-brand-accent"
                 >
-                  <Check className="size-8 text-brand-on-dark" strokeWidth={3.5} />
+                  <Check className="size-12 text-brand-on-dark" strokeWidth={3.5} />
                 </span>
                 <div>
                   <span className="inline-flex rounded-full bg-brand-accent px-3.5 py-1 text-xs font-bold text-brand-on-dark">

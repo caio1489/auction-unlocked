@@ -3,7 +3,7 @@ import { offer } from "@/config/offer";
 
 export function HeaderLogo() {
   return (
-    <header className="bg-white py-3">
+    <header className="bg-white py-4">
       <div className="container-wide flex justify-center">
         <img
           src={assets["Logo sem fundo da pagina.png"]}
@@ -11,7 +11,7 @@ export function HeaderLogo() {
           width={260}
           height={72}
           loading="eager"
-          className="h-auto w-[min(100%,170px)] object-contain sm:w-[200px]"
+          className="h-auto w-[min(100%,190px)] object-contain sm:w-[230px]"
         />
       </div>
     </header>
