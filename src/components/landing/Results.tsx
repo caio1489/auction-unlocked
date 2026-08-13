@@ -10,6 +10,7 @@ const results = [
     to: "R$ 16.000",
     off: "51%",
     entrada: "R$ 4.000",
+    parcelas: "30x no boleto sem juros",
   },
   {
     key: "jardim",
@@ -20,6 +21,7 @@ const results = [
     to: "R$ 430.000",
     off: "49%",
     entrada: "R$ 107.500",
+    parcelas: "60x no boleto sem juros",
   },
   {
     key: "ribeirao",
@@ -30,6 +32,7 @@ const results = [
     to: "R$ 160.000",
     off: "50%",
     entrada: "R$ 40.000",
+    parcelas: "60x no boleto sem juros",
   },
   {
     key: "bmw",
@@ -40,6 +43,7 @@ const results = [
     to: "R$ 60.000",
     off: "40%",
     entrada: "R$ 15.000",
+    parcelas: "30x no boleto sem juros",
   },
 ];
 
@@ -99,7 +103,7 @@ export function ResultsProofSection() {
                   {r.entrada}
                 </span>
                 <span className="mt-2 block text-sm font-bold text-brand-accent sm:text-base">
-                  + 60x no boleto sem juros
+                  + {r.parcelas}
                 </span>
               </div>
             </figcaption>

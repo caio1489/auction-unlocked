@@ -10,7 +10,7 @@ export function HeaderLogo() {
           width={1000}
           height={511}
           loading="eager"
-          className="h-[46px] w-auto object-contain sm:h-[73px]"
+          className="h-[55px] w-auto object-contain sm:h-[73px]"
         />
       </div>
     </header>
