@@ -2,40 +2,44 @@ import { assets } from "@/lib/landing-assets";
 
 const results = [
   {
-    label: "RESULTADO 01",
+    key: "gol",
     src: assets["Gol.webp"],
     alt: "Volkswagen Gol arrematado em leilão",
     title: "Volkswagen Gol",
-    from: "R$ 42.000",
-    to: "R$ 21.000",
-    off: "50% OFF",
+    from: "R$ 33.000",
+    to: "R$ 16.000",
+    off: "51%",
+    entrada: "R$ 4.000",
   },
   {
-    label: "RESULTADO 02",
+    key: "jardim",
     src: assets["apto jardim paulista.webp"],
     alt: "Apartamento no Jardim Paulista arrematado em leilão",
     title: "Apartamento — Jardim Paulista",
     from: "R$ 850.000",
     to: "R$ 430.000",
-    off: "49% OFF",
+    off: "49%",
+    entrada: "R$ 107.500",
   },
   {
-    label: "RESULTADO 03",
+    key: "ribeirao",
     src: assets["apto ribeirao preto.webp"],
     alt: "Apartamento em Ribeirão Preto arrematado em leilão",
     title: "Apartamento — Ribeirão Preto",
     from: "R$ 320.000",
     to: "R$ 160.000",
-    off: "50% OFF",
+    off: "50%",
+    entrada: "R$ 40.000",
   },
   {
-    label: "RESULTADO 04",
+    key: "bmw",
     src: assets["bmw.webp"],
     alt: "BMW arrematada em leilão",
     title: "BMW",
     from: "R$ 100.000",
     to: "R$ 60.000",
-    off: "40% OFF",
+    off: "40%",
+    entrada: "R$ 15.000",
   },
 ];
 
@@ -55,17 +59,15 @@ export function ResultsProofSection() {
       <div className="container-wide mt-10 grid gap-6 md:grid-cols-2">
         {results.map((r) => (
           <figure
-            key={r.label}
-            className="overflow-hidden rounded-3xl border border-brand-border bg-brand-light"
+            key={r.key}
+            className="flex flex-col overflow-hidden rounded-3xl border border-brand-border bg-brand-light"
           >
-            <div className="flex items-center justify-between gap-3 bg-brand-accent px-5 py-3">
-              <span className="text-xs font-extrabold uppercase tracking-[0.18em] text-brand-on-dark">
-                {r.label}
-              </span>
-              <span className="rounded-full bg-brand-on-dark px-3 py-1 text-xs font-extrabold text-brand-accent">
-                {r.off}
+            <div className="bg-brand-accent px-5 py-3 text-center">
+              <span className="block text-[clamp(1.15rem,4.6vw,1.6rem)] font-extrabold uppercase leading-tight tracking-[0.02em] text-brand-on-dark">
+                Desconto de {r.off}
               </span>
             </div>
+
             <img
               src={r.src}
               alt={r.alt}
@@ -74,14 +76,32 @@ export function ResultsProofSection() {
               height={750}
               className="h-auto w-full object-contain"
             />
-            <figcaption className="flex flex-wrap items-center justify-between gap-3 border-t border-brand-border bg-white px-5 py-4">
-              <span className="text-base font-bold text-brand-on-light">{r.title}</span>
-              <span className="flex items-baseline gap-2">
-                <span className="text-sm font-bold text-brand-on-light/50 line-through">
+
+            <figcaption className="flex flex-1 flex-col gap-4 border-t border-brand-border bg-white px-5 py-5">
+              <span className="text-center text-base font-bold text-brand-on-light sm:text-lg">
+                {r.title}
+              </span>
+
+              <div className="rounded-2xl bg-brand-light px-4 py-4 text-center">
+                <span className="block text-sm font-bold uppercase tracking-[0.12em] text-brand-on-light/55 line-through sm:text-base">
                   De {r.from}
                 </span>
-                <span className="text-lg font-extrabold text-brand-accent">por {r.to}</span>
-              </span>
+                <span className="mt-1 block text-[clamp(1.7rem,7vw,2.4rem)] font-extrabold leading-none text-brand-accent">
+                  por {r.to}
+                </span>
+              </div>
+
+              <div className="rounded-2xl border-2 border-brand-accent/25 bg-brand-accent/8 px-4 py-4 text-center">
+                <span className="block text-xs font-extrabold uppercase tracking-[0.2em] text-brand-on-light/60">
+                  Entrada
+                </span>
+                <span className="mt-1 block text-[clamp(1.3rem,5.4vw,1.8rem)] font-extrabold leading-none text-brand-on-light">
+                  {r.entrada}
+                </span>
+                <span className="mt-2 block text-sm font-bold text-brand-accent sm:text-base">
+                  + 60x no boleto sem juros
+                </span>
+              </div>
             </figcaption>
           </figure>
         ))}
