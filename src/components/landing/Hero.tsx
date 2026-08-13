@@ -1,5 +1,5 @@
 import { assets } from "@/lib/landing-assets";
-import { offer } from "@/config/offer";
+
 
 export function HeroSection() {
   return (
