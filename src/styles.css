@@ -205,10 +205,23 @@
   transition:
     background-color 0.2s ease,
     transform 0.2s ease;
+  animation: pulse-glow 2.5s ease-in-out infinite;
 }
 
 @utility btn-cta-hover {
   background: var(--color-brand-accent-strong);
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 12px 30px -12px color-mix(in oklab, #2f9e33 70%, transparent);
+  }
+  50% {
+    box-shadow:
+      0 14px 36px -10px color-mix(in oklab, #2f9e33 85%, transparent),
+      0 0 0 4px color-mix(in oklab, #2f9e33 25%, transparent);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
