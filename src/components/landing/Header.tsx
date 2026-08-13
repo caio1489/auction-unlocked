@@ -22,11 +22,9 @@ export function UrgencyBanner() {
   return (
     <div className="w-full bg-linear-to-r from-brand-accent to-brand-accent-strong py-2.5 text-brand-on-dark">
       <div className="container-wide flex flex-wrap items-center justify-center gap-x-2 gap-y-0 text-center">
-        <span className="text-sm font-bold sm:text-base">
-          {offer.liveLabel}
+        <span className="text-base font-bold sm:text-lg">
+          Você está travado para arrematar no leilão?
         </span>
-        <span aria-hidden>—</span>
-        <span className="text-sm font-bold sm:text-base">{offer.liveTime}</span>
       </div>
     </div>
   );
