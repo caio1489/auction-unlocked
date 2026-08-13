@@ -10,10 +10,11 @@ import {
 } from "@/components/landing/Pain";
 import {
   DeliverablesSection,
-  DeliverablesSummarySection,
+  DeliverablesBonusSection,
 } from "@/components/landing/Deliverables";
 import {
   AudienceFitSection,
+  FinalPitchSection,
   OfferStackSection,
   OfferCardSection,
   AccessStepsSection,
@@ -52,14 +53,14 @@ function Index() {
       <SolutionBridgeSection />
       <BenefitsSection />
       <DeliverablesSection />
-      <DeliverablesSummarySection variant="top" />
+      <DeliverablesBonusSection />
       <AudienceFitSection />
+      <FinalPitchSection />
       <OfferStackSection />
       <OfferCardSection ctaLabel={offer.ctaPrimary} />
       <AccessStepsSection />
       <ChoiceSection />
       <AuthoritySection />
-      <DeliverablesSummarySection variant="bottom" />
       <OfferCardSection
         id="oferta-final"
         ctaLabel={offer.ctaSecondary}
