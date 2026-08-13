@@ -1,7 +1,17 @@
 import { assets } from "@/lib/landing-assets";
 import { offer } from "@/config/offer";
 import { Cta } from "./Cta";
-import { Mail, PackageCheck, CheckCircle2, Lock, ShieldCheck, Star } from "lucide-react";
+import {
+  Mail,
+  PackageCheck,
+  CheckCircle2,
+  Lock,
+  ShieldCheck,
+  Star,
+  Check,
+  Frown,
+  ArrowRight,
+} from "lucide-react";
 
 const audience = [
   "Quer fazer sua primeira arrematação ainda esse mês",
@@ -237,9 +247,9 @@ export function ChoiceSection() {
               <div className="flex items-center gap-4">
                 <span
                   aria-hidden
-                  className="grid size-14 shrink-0 place-items-center rounded-full bg-brand-light text-3xl"
+                  className="grid size-14 shrink-0 place-items-center rounded-full bg-brand-light"
                 >
-                  😔
+                  <Frown className="size-8 text-brand-on-light/60" strokeWidth={2} />
                 </span>
                 <div>
                   <span className="inline-flex rounded-full bg-brand-on-light/70 px-3.5 py-1 text-xs font-bold text-brand-on-dark">
@@ -251,7 +261,11 @@ export function ChoiceSection() {
                 </div>
               </div>
               <p className="mt-4 flex gap-2 text-base text-brand-on-light/75">
-                <span aria-hidden>👉</span>
+                <ArrowRight
+                  aria-hidden
+                  className="mt-1 size-4 shrink-0 text-brand-on-light/50"
+                  strokeWidth={3}
+                />
                 <span>
                   Continuar travado, adiando a sua primeira arrematação pra semana que vem, pro
                   próximo mês, pra “quando der tempo”.
@@ -263,9 +277,9 @@ export function ChoiceSection() {
               <div className="flex items-center gap-4">
                 <span
                   aria-hidden
-                  className="grid size-14 shrink-0 place-items-center rounded-full bg-brand-light text-3xl"
+                  className="grid size-14 shrink-0 place-items-center rounded-2xl bg-brand-accent"
                 >
-                  ✅
+                  <Check className="size-8 text-brand-on-dark" strokeWidth={3.5} />
                 </span>
                 <div>
                   <span className="inline-flex rounded-full bg-brand-accent px-3.5 py-1 text-xs font-bold text-brand-on-dark">
