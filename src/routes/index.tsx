@@ -22,6 +22,8 @@ import {
   AuthoritySection,
 } from "@/components/landing/Offer";
 import { FaqSection, LegalFooter } from "@/components/landing/Faq";
+import { LotesSection } from "@/components/landing/Lotes";
+import { SalesNotifications } from "@/components/landing/SalesNotifications";
 import { offer } from "@/config/offer";
 
 const title = "Mega Aulão ao Vivo sobre Leilões — Paulo Machado";
@@ -58,12 +60,14 @@ function Index() {
       <FinalPitchSection />
       <OfferStackSection />
       <OfferCardSection ctaLabel={offer.ctaPrimary} />
+      <LotesSection />
       <AccessStepsSection />
       <ChoiceSection />
       <AuthoritySection />
       <OfferCardSection id="oferta-final" ctaLabel={offer.ctaSecondary} />
       <FaqSection />
       <LegalFooter />
+      <SalesNotifications />
     </main>
   );
 }
