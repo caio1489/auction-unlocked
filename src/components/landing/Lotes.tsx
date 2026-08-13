@@ -13,22 +13,22 @@ export function LotesSection() {
       <div className="container-reading">
         <div className="rounded-[28px] border border-white/10 bg-black/40 px-5 py-8 sm:px-10 sm:py-10">
           <div className="flex justify-center">
-            <span className="rounded-full bg-brand-accent px-5 py-2 text-center text-[11px] font-extrabold uppercase tracking-[0.14em] text-brand-on-dark sm:text-xs">
+            <span className="whitespace-nowrap rounded-full bg-brand-accent px-3.5 py-1.5 text-center text-[9px] font-extrabold uppercase tracking-[0.08em] text-brand-on-dark sm:px-5 sm:py-2 sm:text-xs sm:tracking-[0.14em]">
               1º lote · valor promocional · poucas vagas
             </span>
           </div>
 
-          <p className="mx-auto mt-5 max-w-[520px] text-center text-lg leading-snug text-brand-on-dark/90 sm:text-xl">
-            Para que mais pessoas possam ter oportunidade de participar,{" "}
+          <p className="mx-auto mt-4 max-w-[330px] text-center text-base leading-snug text-brand-on-dark/90 sm:max-w-[520px] sm:text-xl">
+            Para que mais pessoas possam participar,{" "}
             <em className="font-extrabold not-italic">o primeiro lote tem valor especial.</em>
           </p>
 
-          <hr className="my-7 border-white/10" />
+          <hr className="my-5 border-white/10" />
 
-          <p className="text-center text-lg font-semibold sm:text-xl">
+          <p className="whitespace-nowrap text-center text-[15px] font-semibold sm:text-xl">
             Hoje você pode garantir tudo isso por:
           </p>
-          <p className="mt-1 text-center text-base text-brand-on-dark/70">
+          <p className="mt-1 text-center text-sm text-brand-on-dark/70 sm:text-base">
             De: <span className="line-through">{offer.anchorTotal}</span>
           </p>
 
