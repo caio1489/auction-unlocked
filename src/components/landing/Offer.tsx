@@ -83,31 +83,30 @@ export function OfferStackSection() {
         </h2>
 
         <div className="mt-8 overflow-hidden rounded-[28px] border-2 border-brand-border bg-white shadow-[0_28px_60px_-42px_rgba(0,0,0,0.45)]">
-          <ul className="flex flex-col">
+          <ul className="flex flex-col divide-y divide-brand-border/70">
             {stack.map(([label, value], i) => (
               <li
                 key={label}
-                className={`flex flex-col gap-2 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-7 ${
-                  i % 2 === 1 ? "bg-brand-light/70" : "bg-white"
+                className={`flex items-center gap-4 px-4 py-4 sm:px-7 sm:py-5 ${
+                  i % 2 === 1 ? "bg-brand-light/60" : "bg-white"
                 }`}
               >
-                <span className="flex min-w-0 items-start gap-3">
-                  <span
-                    aria-hidden
-                    className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-brand-accent text-[13px] font-black text-brand-on-dark"
-                  >
-                    ✓
-                  </span>
-                  <span className="text-[1.05rem] font-bold leading-snug text-brand-on-light sm:text-xl">
-                    {label}
-                  </span>
+                <span
+                  aria-hidden
+                  className="grid size-8 shrink-0 place-items-center rounded-xl bg-brand-accent text-base font-black text-brand-on-dark shadow-[0_6px_14px_-6px_rgba(47,158,51,0.9)] sm:size-9"
+                >
+                  ✓
                 </span>
-                <span className="ml-9 shrink-0 rounded-full bg-brand-light px-3.5 py-1.5 text-base font-extrabold text-brand-on-light/50 line-through sm:ml-0 sm:text-lg">
+                <span className="min-w-0 flex-1 text-[1.02rem] font-bold leading-snug text-brand-on-light sm:text-xl">
+                  {label}
+                </span>
+                <span className="shrink-0 rounded-full border border-brand-border bg-brand-light px-3 py-1.5 text-[0.95rem] font-extrabold text-brand-on-light/45 line-through sm:text-lg">
                   {value}
                 </span>
               </li>
             ))}
           </ul>
+
 
           <div className="flex flex-col items-center gap-1 border-t-2 border-dashed border-brand-border bg-brand-on-light px-5 py-6 text-center">
             <span className="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-on-dark/60">
