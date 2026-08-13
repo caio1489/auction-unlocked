@@ -76,12 +76,12 @@ function DeliverableCards({ items, offset = 0 }: { items: Item[]; offset?: numbe
 
 export function DeliverablesSection() {
   return (
-    <section className="bg-white py-14 sm:py-20">
+    <section className="bg-white pb-14 pt-16 sm:pb-20 sm:pt-20">
       <div className="container-reading text-center">
-        <span className="inline-flex rounded-full bg-brand-dark px-6 py-3 text-base font-semibold text-brand-on-dark shadow-lg">
+        <span className="inline-flex rounded-full bg-brand-dark px-6 py-2.5 text-base font-semibold text-brand-on-dark shadow-[0_10px_24px_-12px_rgba(0,0,0,0.5)]">
           E tem mais…
         </span>
-        <h2 className="mt-6 text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-light">
+        <h2 className="mt-5 text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-light">
           Veja tudo que você vai receber <span className="hl">ao vivo</span>
         </h2>
       </div>
@@ -92,16 +92,20 @@ export function DeliverablesSection() {
 
 export function DeliverablesBonusSection() {
   return (
-    <section className="bg-white pb-14 sm:pb-20">
-      <div className="container-reading text-center">
-        <span className="inline-flex rounded-full bg-brand-dark px-6 py-3 text-base font-semibold text-brand-on-dark shadow-lg">
-          Ainda não acabou!
-        </span>
-        <h2 className="mt-6 text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-light">
-          Você também vai <span className="hl">receber:</span>
-        </h2>
-      </div>
-      <DeliverableCards items={deliverablesB} offset={1} />
-    </section>
+    <>
+      <section className="bg-linear-to-b from-black to-brand-dark py-12 text-brand-on-dark sm:py-14">
+        <div className="container-reading text-center">
+          <span className="inline-flex rounded-full bg-brand-accent px-6 py-2.5 text-base font-bold text-brand-on-dark">
+            Ainda não acabou!
+          </span>
+          <h2 className="mt-5 text-[clamp(1.4rem,4vw,2.1rem)]">
+            Você também vai <span className="hl">receber:</span>
+          </h2>
+        </div>
+      </section>
+      <section className="bg-white py-14 sm:py-20">
+        <DeliverableCards items={deliverablesB} offset={1} />
+      </section>
+    </>
   );
 }
