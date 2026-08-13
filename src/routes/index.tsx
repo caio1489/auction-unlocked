@@ -59,7 +59,7 @@ function Index() {
       <AudienceFitSection />
       <FinalPitchSection />
       <OfferStackSection />
-      <OfferCardSection ctaLabel={offer.ctaPrimary} />
+      
       <LotesSection />
       <AccessStepsSection />
       <ChoiceSection />
