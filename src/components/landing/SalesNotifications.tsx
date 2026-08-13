@@ -82,18 +82,27 @@ export function SalesNotifications() {
 
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout>;
+    let shown = 0;
+
+    const nextGap = () => {
+      // 2ª notificação: intervalo fixo maior; da 3ª em diante, aleatório
+      if (shown === 1) return 22000;
+      return rand(25000, 55000);
+    };
 
     const show = () => {
       setVisible(true);
+      shown += 1;
       timer = setTimeout(() => {
         setVisible(false);
         timer = setTimeout(() => {
           setIndex((i) => (i + 1) % buyers.length);
           show();
-        }, rand(3000, 7000));
+        }, nextGap());
       }, 5000);
     };
 
+    // 1ª notificação aparece rápido, logo após o acesso
     timer = setTimeout(show, 2200);
     return () => clearTimeout(timer);
   }, []);
