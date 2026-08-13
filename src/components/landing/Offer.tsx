@@ -71,7 +71,9 @@ const stack = [
   ["Como identificar se um leilão é falso", "R$ 47"],
   ["Como comprar carros sem batida", "R$ 97"],
   ["Como comprar imóveis desocupados", "R$ 77"],
+  ["Como comprar parcelado no boleto", "R$ 67"],
 ];
+
 
 export function OfferStackSection() {
   return (
