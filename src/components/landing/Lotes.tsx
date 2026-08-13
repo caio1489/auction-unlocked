@@ -32,7 +32,7 @@ export function LotesSection() {
             De: <span className="line-through">{offer.anchorTotal}</span>
           </p>
 
-          <div className="mt-6 grid grid-cols-3 gap-2 sm:gap-4">
+          <div className="mt-5 grid grid-cols-3 gap-2 sm:gap-4">
             <div className="rounded-2xl border-2 border-brand-accent bg-brand-accent/12 px-2 py-4 text-center shadow-[0_0_0_4px_rgba(47,158,51,0.12)]">
               <span className="inline-flex rounded-full bg-brand-accent px-2.5 py-1 text-[9px] font-extrabold uppercase tracking-wider text-brand-on-dark sm:text-[11px]">
                 Lote especial
@@ -65,7 +65,7 @@ export function LotesSection() {
             ))}
           </div>
 
-          <p className="mt-7 text-center text-base font-bold uppercase tracking-[0.06em] text-brand-on-dark/85 sm:text-lg">
+          <p className="mt-6 text-center text-base font-bold uppercase tracking-[0.06em] text-brand-on-dark/85 sm:text-lg">
             Preço exclusivo enquanto durar o lote.
           </p>
 
