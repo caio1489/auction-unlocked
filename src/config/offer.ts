@@ -9,7 +9,7 @@ export const offer = {
   liveLabel: "Aula ao vivo",
   liveTime: "Hoje 20h01",
   price: "R$ 29,90",
-  anchorTotal: "R$ 432",
+  anchorTotal: "R$ 335",
   ctaPrimary: "Quero reservar minha vaga",
   ctaSecondary: "Quero participar",
   checkoutUrl: "CHECKOUT_URL_A_DEFINIR",

@@ -81,7 +81,7 @@ export function DeliverablesSection() {
         <span className="inline-flex rounded-full bg-brand-dark px-6 py-2.5 text-base font-semibold text-brand-on-dark shadow-[0_10px_24px_-12px_rgba(0,0,0,0.5)]">
           E tem mais…
         </span>
-        <h2 className="mt-5 text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-light">
+        <h2 className="mt-5 text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
           Veja tudo que você vai receber <span className="hl">ao vivo</span>
         </h2>
       </div>
@@ -98,7 +98,7 @@ export function DeliverablesBonusSection() {
           <span className="inline-flex rounded-full bg-brand-accent px-6 py-2.5 text-base font-bold text-brand-on-dark">
             Ainda não acabou!
           </span>
-          <h2 className="mt-5 text-[clamp(1.4rem,4vw,2.1rem)]">
+          <h2 className="mt-5 text-[clamp(1.6rem,5.4vw,2.1rem)]">
             Você também vai <span className="hl">receber:</span>
           </h2>
         </div>

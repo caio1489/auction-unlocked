@@ -1,11 +1,12 @@
 import { assets } from "@/lib/landing-assets";
+import { offer } from "@/config/offer";
 
 export function HeroSection() {
   return (
     <section className="bg-brand-light pb-10 pt-10 sm:pt-14">
       <div className="container-reading text-center">
         <p className="text-base font-bold text-brand-on-light/70 sm:text-lg">
-          Você está travado para arrematar no leilão?
+          {offer.liveLabel} — {offer.liveTime}
         </p>
         <h1 className="mt-4 text-[clamp(1.65rem,5.2vw,2.6rem)] font-extrabold text-brand-on-light">
           Copie minha estratégia para comprar imóveis e veículos com{" "}

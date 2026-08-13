@@ -27,7 +27,7 @@ export function AudienceFitSection() {
     <section className="bg-linear-to-b from-[#3a3838] to-black py-14 text-brand-on-dark sm:py-20">
       <div className="container-wide">
         <div className="rounded-[32px] bg-[#1b1a1a] px-6 py-10 shadow-[0_30px_60px_-40px_rgba(0,0,0,0.9)] sm:px-12 sm:py-12">
-          <h2 className="text-center text-[clamp(1.4rem,4vw,2.1rem)]">
+          <h2 className="text-center text-[clamp(1.6rem,5.4vw,2.1rem)]">
             Esse <span className="hl">aulão ao vivo</span> é para você que:
           </h2>
           <ul className="mx-auto mt-8 flex max-w-[820px] flex-col gap-4">
@@ -67,7 +67,6 @@ export function FinalPitchSection() {
 const stack = [
   ["10 sites de leilão: na sua mão", "R$ 47"],
   ["Guia para identificar boas oportunidades", "R$ 67"],
-  ["Combo: 2 estratégias para ter renda passiva com leilões", "R$ 97"],
   ["Como identificar se um leilão é falso", "R$ 47"],
   ["Como comprar carros sem batida", "R$ 97"],
   ["Como comprar imóveis desocupados", "R$ 77"],
@@ -77,7 +76,7 @@ export function OfferStackSection() {
   return (
     <section className="bg-brand-light py-14 sm:py-20">
       <div className="container-reading">
-        <h2 className="text-center text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-light">
+        <h2 className="text-center text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
           Recapitulando tudo que você vai receber com o{" "}
           <span className="hl">aulão ao vivo sobre leilão</span>
         </h2>
@@ -207,7 +206,7 @@ export function AccessStepsSection() {
   return (
     <section className="bg-brand-light py-14 sm:py-20">
       <div className="container-wide">
-        <h2 className="text-center text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-light">
+        <h2 className="text-center text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
           Compre agora e receba seu acesso no e-mail imediatamente!
         </h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -232,7 +231,7 @@ export function ChoiceSection() {
     <>
       <section className="bg-black py-10">
         <div className="container-wide">
-          <h2 className="text-center text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-dark">
+          <h2 className="text-center text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-dark">
             Agora você tem <span className="hl">duas escolhas:</span>
           </h2>
         </div>
@@ -316,7 +315,7 @@ export function AuthoritySection() {
     <section className="bg-brand-dark py-14 text-brand-on-dark sm:py-20">
       <div className="container-wide grid items-center gap-10 md:grid-cols-2">
         <div>
-          <h2 className="text-[clamp(1.4rem,4vw,2.1rem)]">
+          <h2 className="text-[clamp(1.6rem,5.4vw,2.1rem)]">
             O criador do aulão ao vivo é <span className="hl">Paulo Machado</span>
           </h2>
           <p className="mt-3 text-lg font-bold text-brand-on-dark/85">
