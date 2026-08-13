@@ -1,17 +1,16 @@
-import { assets } from "@/lib/landing-assets";
-import { offer } from "@/config/offer";
+import logoAoVivo from "@/assets/logo-mega-aulao-ao-vivo.png.asset.json";
 
 export function HeaderLogo() {
   return (
-    <header className="bg-white py-4">
+    <header className="bg-white py-4 sm:py-6">
       <div className="container-wide flex justify-center">
         <img
-          src={assets["Logo sem fundo da pagina.png"]}
-          alt="Logo Mega Aulão ao Vivo sobre Leilões"
-          width={260}
-          height={72}
+          src={logoAoVivo.url}
+          alt="Mega Aulão ao Vivo sobre Leilões — hoje 20h01"
+          width={1000}
+          height={511}
           loading="eager"
-          className="h-auto w-[min(100%,190px)] object-contain sm:w-[230px]"
+          className="h-[46px] w-auto object-contain sm:h-[73px]"
         />
       </div>
     </header>

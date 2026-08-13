@@ -12,6 +12,6 @@ export const offer = {
   anchorTotal: "R$ 335",
   ctaPrimary: "Quero reservar minha vaga",
   ctaSecondary: "Quero participar",
-  checkoutUrl: "CHECKOUT_URL_A_DEFINIR",
+  checkoutUrl: "https://pay.kiwify.com.br/cJlTXvi",
   contactEmail: "contato@paulomachado.com.br",
 } as const;

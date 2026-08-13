@@ -1,4 +1,5 @@
 import { assets } from "@/lib/landing-assets";
+import logoAoVivo from "@/assets/logo-mega-aulao-ao-vivo.png.asset.json";
 import { offer } from "@/config/offer";
 import { Cta } from "./Cta";
 import {
@@ -50,12 +51,12 @@ export function AudienceFitSection() {
 
 export function FinalPitchSection() {
   return (
-    <section className="bg-linear-to-b from-[#2b2a2a] to-black py-16 text-brand-on-dark sm:py-24">
+    <section className="bg-linear-to-b from-[#2b2a2a] to-black py-7 text-brand-on-dark sm:py-9">
       <div className="container-reading text-center">
-        <span className="inline-flex rounded-full bg-brand-accent px-6 py-2.5 text-sm font-bold text-brand-on-dark">
+        <span className="inline-flex rounded-full bg-brand-accent px-6 py-2 text-sm font-bold text-brand-on-dark">
           Enfim…
         </span>
-        <p className="mx-auto mt-6 max-w-[620px] text-[clamp(1.5rem,4.6vw,2.3rem)] font-extrabold leading-tight">
+        <p className="mx-auto mt-4 max-w-[620px] text-[clamp(1.4rem,4.4vw,2.1rem)] font-extrabold leading-tight">
           Se você quer destravar sua primeira arrematação ainda esse mês, esse{" "}
           <span className="hl">aulão ao vivo é pra você.</span>
         </p>
@@ -81,33 +82,44 @@ export function OfferStackSection() {
           <span className="hl">aulão ao vivo sobre leilão</span>
         </h2>
 
-        <div className="mt-8 rounded-[28px] border border-brand-border bg-white px-5 py-6 sm:px-8">
-          <ul className="flex flex-col divide-y divide-brand-border">
-            {stack.map(([label, value]) => (
+        <div className="mt-8 overflow-hidden rounded-[28px] border-2 border-brand-border bg-white shadow-[0_28px_60px_-42px_rgba(0,0,0,0.45)]">
+          <ul className="flex flex-col">
+            {stack.map(([label, value], i) => (
               <li
                 key={label}
-                className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4"
+                className={`flex flex-col gap-2 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-7 ${
+                  i % 2 === 1 ? "bg-brand-light/70" : "bg-white"
+                }`}
               >
-                <span className="flex min-w-0 items-start gap-2 text-sm font-semibold text-brand-on-light sm:text-base">
-                  <span aria-hidden className="mt-0.5 font-black text-brand-accent">
+                <span className="flex min-w-0 items-start gap-3">
+                  <span
+                    aria-hidden
+                    className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-brand-accent text-[13px] font-black text-brand-on-dark"
+                  >
                     ✓
                   </span>
-                  {label}
+                  <span className="text-[1.05rem] font-bold leading-snug text-brand-on-light sm:text-xl">
+                    {label}
+                  </span>
                 </span>
-                <span className="shrink-0 text-sm font-bold text-brand-on-light/50 line-through sm:text-base">
+                <span className="ml-9 shrink-0 rounded-full bg-brand-light px-3.5 py-1.5 text-base font-extrabold text-brand-on-light/50 line-through sm:ml-0 sm:text-lg">
                   {value}
                 </span>
               </li>
             ))}
           </ul>
+
+          <div className="flex flex-col items-center gap-1 border-t-2 border-dashed border-brand-border bg-brand-on-light px-5 py-6 text-center">
+            <span className="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-on-dark/60">
+              Tudo isso deveria custar
+            </span>
+            <span className="text-[clamp(1.9rem,7vw,2.6rem)] font-extrabold leading-none text-brand-on-dark line-through">
+              {offer.anchorTotal}
+            </span>
+          </div>
         </div>
 
-        <p className="mx-auto mt-6 w-fit rounded-full border border-brand-border bg-white px-6 py-3 text-center text-base font-bold text-brand-on-light sm:text-lg">
-          Tudo isso deveria custar:{" "}
-          <span className="text-brand-on-light/50 line-through">{offer.anchorTotal}</span>
-        </p>
-
-        <p className="mt-8 text-center text-[clamp(1.1rem,3vw,1.5rem)] font-extrabold text-brand-on-light">
+        <p className="mt-8 text-center text-[clamp(1.15rem,3.2vw,1.55rem)] font-extrabold text-brand-on-light">
           Mas, somente hoje, você pode ter acesso ao mega aulão sobre leilões por um valor muito
           mais acessível:
         </p>
@@ -116,19 +128,12 @@ export function OfferStackSection() {
   );
 }
 
-export function OfferCardSection({
-  id,
-  ctaLabel,
-  note,
-}: {
-  id?: string;
-  ctaLabel: string;
-  note?: string;
-}) {
+
+export function OfferCardSection({ id, ctaLabel }: { id?: string; ctaLabel: string }) {
   return (
     <section id={id} className="bg-white py-14 sm:py-20">
       <div className="container-wide">
-        <div className="grid items-center gap-8 rounded-[32px] bg-brand-light p-5 sm:p-8 md:grid-cols-2">
+        <div className="grid items-center gap-6 rounded-[32px] bg-brand-light p-5 sm:p-8 md:grid-cols-2">
           <img
             src={assets["foto com todos entregaveis .png"]}
             alt="Todos os materiais do Mega Aulão ao Vivo sobre Leilões"
@@ -137,25 +142,25 @@ export function OfferCardSection({
             height={750}
             className="h-auto w-full rounded-3xl object-contain"
           />
-          <div className="flex flex-col items-center gap-5 text-center">
+          <div className="flex flex-col items-center text-center">
             <img
-              src={assets["Logo sem fundo da pagina.png"]}
-              alt="Logo Mega Aulão ao Vivo sobre Leilões"
+              src={logoAoVivo.url}
+              alt="Mega Aulão ao Vivo sobre Leilões — hoje 20h01"
               loading="lazy"
-              width={260}
-              height={80}
-              className="h-auto w-[200px] object-contain"
+              width={1000}
+              height={511}
+              className="h-[52px] w-auto object-contain sm:h-[64px]"
             />
-            <div className="w-full border-y border-brand-border py-5">
+            <div className="mt-3 w-full">
               <p className="text-sm font-bold uppercase tracking-wide text-brand-on-light/60">
                 {offer.shortName}
               </p>
-              <p className="mt-1 text-[clamp(2rem,7vw,3rem)] font-extrabold text-brand-accent">
+              <p className="mt-0.5 text-[clamp(2rem,7vw,3rem)] font-extrabold leading-none text-brand-accent">
                 {offer.price}
               </p>
             </div>
-            <Cta label={ctaLabel} className="w-full" />
-            <ul className="flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            <Cta label={ctaLabel} className="mt-4 w-full" />
+            <ul className="mt-4 flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-2">
               {[
                 { icon: Lock, a: "Compra", b: "Segura" },
                 { icon: ShieldCheck, a: "Privacidade", b: "Protegida" },
@@ -171,18 +176,13 @@ export function OfferCardSection({
                 </li>
               ))}
             </ul>
-            <p className="text-sm font-medium text-brand-on-light/70">
-              {note ?? "Compre agora e receba seu acesso no e-mail imediatamente."}
-            </p>
-            <p className="text-xs font-semibold text-brand-on-light/60">
-              PIX ou cartão pela Kiwify
-            </p>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
 
 const steps = [
   {
@@ -207,7 +207,7 @@ export function AccessStepsSection() {
     <section className="bg-brand-light py-14 sm:py-20">
       <div className="container-wide">
         <h2 className="text-center text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
-          Compre agora e receba seu acesso no e-mail imediatamente!
+          Como funciona o seu acesso ao aulão
         </h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {steps.map(({ icon: Icon, title, desc }) => (

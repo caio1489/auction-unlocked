@@ -61,11 +61,7 @@ function Index() {
       <AccessStepsSection />
       <ChoiceSection />
       <AuthoritySection />
-      <OfferCardSection
-        id="oferta-final"
-        ctaLabel={offer.ctaSecondary}
-        note="Mega aulão ao vivo sobre leilões — acesso imediato no seu e-mail."
-      />
+      <OfferCardSection id="oferta-final" ctaLabel={offer.ctaSecondary} />
       <FaqSection />
       <LegalFooter />
     </main>
