@@ -128,19 +128,11 @@ export function OfferStackSection() {
 }
 
 
-export function OfferCardSection({
-  id,
-  ctaLabel,
-  note,
-}: {
-  id?: string;
-  ctaLabel: string;
-  note?: string;
-}) {
+export function OfferCardSection({ id, ctaLabel }: { id?: string; ctaLabel: string }) {
   return (
     <section id={id} className="bg-white py-14 sm:py-20">
       <div className="container-wide">
-        <div className="grid items-center gap-8 rounded-[32px] bg-brand-light p-5 sm:p-8 md:grid-cols-2">
+        <div className="grid items-center gap-6 rounded-[32px] bg-brand-light p-5 sm:p-8 md:grid-cols-2">
           <img
             src={assets["foto com todos entregaveis .png"]}
             alt="Todos os materiais do Mega Aulão ao Vivo sobre Leilões"
@@ -149,25 +141,25 @@ export function OfferCardSection({
             height={750}
             className="h-auto w-full rounded-3xl object-contain"
           />
-          <div className="flex flex-col items-center gap-5 text-center">
+          <div className="flex flex-col items-center text-center">
             <img
-              src={assets["Logo sem fundo da pagina.png"]}
-              alt="Logo Mega Aulão ao Vivo sobre Leilões"
+              src={logoAoVivo.url}
+              alt="Mega Aulão ao Vivo sobre Leilões — hoje 20h01"
               loading="lazy"
-              width={260}
-              height={80}
-              className="h-auto w-[200px] object-contain"
+              width={1000}
+              height={511}
+              className="h-[52px] w-auto object-contain sm:h-[64px]"
             />
-            <div className="w-full border-y border-brand-border py-5">
+            <div className="mt-3 w-full">
               <p className="text-sm font-bold uppercase tracking-wide text-brand-on-light/60">
                 {offer.shortName}
               </p>
-              <p className="mt-1 text-[clamp(2rem,7vw,3rem)] font-extrabold text-brand-accent">
+              <p className="mt-0.5 text-[clamp(2rem,7vw,3rem)] font-extrabold leading-none text-brand-accent">
                 {offer.price}
               </p>
             </div>
-            <Cta label={ctaLabel} className="w-full" />
-            <ul className="flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            <Cta label={ctaLabel} className="mt-4 w-full" />
+            <ul className="mt-4 flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-2">
               {[
                 { icon: Lock, a: "Compra", b: "Segura" },
                 { icon: ShieldCheck, a: "Privacidade", b: "Protegida" },
@@ -183,18 +175,13 @@ export function OfferCardSection({
                 </li>
               ))}
             </ul>
-            <p className="text-sm font-medium text-brand-on-light/70">
-              {note ?? "Compre agora e receba seu acesso no e-mail imediatamente."}
-            </p>
-            <p className="text-xs font-semibold text-brand-on-light/60">
-              PIX ou cartão pela Kiwify
-            </p>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
 
 const steps = [
   {
