@@ -70,6 +70,8 @@ function Index() {
       <FaqSection />
       <LegalFooter />
       <SalesNotifications />
+      <PixelEvents />
+
     </main>
   );
 }
