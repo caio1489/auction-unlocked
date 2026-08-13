@@ -1,6 +1,7 @@
 import { assets } from "@/lib/landing-assets";
 import { offer } from "@/config/offer";
 import { Cta } from "./Cta";
+import { Mail, PackageCheck, CheckCircle2, Lock, ShieldCheck, Star } from "lucide-react";
 
 const audience = [
   "Quer fazer sua primeira arrematação ainda esse mês",
@@ -13,7 +14,7 @@ const audience = [
 
 export function AudienceFitSection() {
   return (
-    <section className="bg-brand-dark py-14 text-brand-on-dark sm:py-20">
+    <section className="bg-linear-to-b from-[#3a3838] to-brand-dark py-14 text-brand-on-dark sm:py-20">
       <div className="container-reading">
         <h2 className="text-center text-[clamp(1.4rem,4vw,2.1rem)]">
           Esse <span className="hl">aulão ao vivo</span> é para você que:
@@ -34,15 +35,22 @@ export function AudienceFitSection() {
             </li>
           ))}
         </ul>
-        <div className="mt-10 text-center">
-          <span className="inline-flex rounded-full bg-brand-accent px-5 py-2 text-sm font-bold text-brand-on-dark">
-            Enfim…
-          </span>
-          <p className="mt-5 text-[clamp(1.1rem,3vw,1.5rem)] font-extrabold">
-            Se você quer destravar sua primeira arrematação ainda esse mês, esse aulão ao vivo é
-            pra você.
-          </p>
-        </div>
+      </div>
+    </section>
+  );
+}
+
+export function FinalPitchSection() {
+  return (
+    <section className="bg-linear-to-b from-brand-dark to-[#141313] py-16 text-brand-on-dark sm:py-20">
+      <div className="container-reading text-center">
+        <span className="inline-flex rounded-full bg-brand-accent px-6 py-2.5 text-sm font-bold text-brand-on-dark">
+          Enfim…
+        </span>
+        <p className="mx-auto mt-6 max-w-[620px] text-[clamp(1.5rem,4.6vw,2.3rem)] font-extrabold leading-tight">
+          Se você quer destravar sua primeira arrematação ainda esse mês, esse{" "}
+          <span className="hl">aulão ao vivo é pra você.</span>
+        </p>
       </div>
     </section>
   );
@@ -140,11 +148,27 @@ export function OfferCardSection({
               </p>
             </div>
             <Cta label={ctaLabel} className="w-full" />
+            <ul className="flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-2">
+              {[
+                { icon: Lock, a: "Compra", b: "Segura" },
+                { icon: ShieldCheck, a: "Privacidade", b: "Protegida" },
+                { icon: Star, a: "Satisfação", b: "Garantida" },
+              ].map(({ icon: Icon, a, b }) => (
+                <li key={a} className="flex items-center gap-1.5 text-brand-on-light/70">
+                  <Icon aria-hidden className="size-4 shrink-0" strokeWidth={2.4} />
+                  <span className="text-left text-[11px] font-bold leading-tight">
+                    {a}
+                    <br />
+                    {b}
+                  </span>
+                </li>
+              ))}
+            </ul>
             <p className="text-sm font-medium text-brand-on-light/70">
               {note ?? "Compre agora e receba seu acesso no e-mail imediatamente."}
             </p>
             <p className="text-xs font-semibold text-brand-on-light/60">
-              Compra segura • Privacidade protegida • PIX ou cartão pela Kiwify
+              PIX ou cartão pela Kiwify
             </p>
           </div>
         </div>
@@ -154,9 +178,21 @@ export function OfferCardSection({
 }
 
 const steps = [
-  ["Acesse seu e-mail", "Assim que finalizar a compra, você vai receber seu acesso no e-mail."],
-  ["Acesso ao produto", "Você vai receber todos os entregáveis imediatamente."],
-  ["Tudo pronto!", "Agora é só copiar e ter sua primeira arrematação pronta ainda esse mês."],
+  {
+    icon: Mail,
+    title: "Acesse seu e-mail",
+    desc: "Assim que finalizar a compra, você vai receber seu acesso no e-mail.",
+  },
+  {
+    icon: PackageCheck,
+    title: "Acesso ao produto",
+    desc: "Você vai receber todos os entregáveis imediatamente.",
+  },
+  {
+    icon: CheckCircle2,
+    title: "Tudo pronto!",
+    desc: "Agora é só copiar e ter sua primeira arrematação pronta ainda esse mês.",
+  },
 ];
 
 export function AccessStepsSection() {
@@ -167,17 +203,12 @@ export function AccessStepsSection() {
           Compre agora e receba seu acesso no e-mail imediatamente!
         </h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
-          {steps.map(([title, desc], i) => (
+          {steps.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
               className="flex flex-col items-center gap-3 rounded-3xl border border-brand-border bg-white px-6 py-8 text-center"
             >
-              <span
-                aria-hidden
-                className="grid size-11 place-items-center rounded-2xl bg-brand-accent text-lg font-black text-brand-on-dark"
-              >
-                {i + 1}
-              </span>
+              <Icon aria-hidden className="size-9 text-brand-accent" strokeWidth={2.2} />
               <h3 className="text-lg text-brand-on-light">{title}</h3>
               <p className="text-sm text-brand-on-light/70">{desc}</p>
             </div>
@@ -190,63 +221,96 @@ export function AccessStepsSection() {
 
 export function ChoiceSection() {
   return (
-    <section className="bg-brand-dark py-14 sm:py-20">
-      <div className="container-wide">
-        <h2 className="text-center text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-dark">
-          Agora você tem <span className="hl">duas escolhas:</span>
-        </h2>
+    <>
+      <section className="bg-black py-10">
+        <div className="container-wide">
+          <h2 className="text-center text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-dark">
+            Agora você tem <span className="hl">duas escolhas:</span>
+          </h2>
+        </div>
+      </section>
 
-        <div className="mt-9 grid gap-5 md:grid-cols-2">
-          <div className="rounded-3xl border border-white/10 bg-white/5 px-6 py-7">
-            <span className="inline-flex rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold text-brand-on-dark">
-              Opção 1
-            </span>
-            <h3 className="mt-4 text-xl text-brand-on-dark">
-              Não comprar seu carro de leilão nunca
-            </h3>
-            <p className="mt-3 text-base text-brand-on-dark/70">
-              Continuar travado, adiando a sua primeira arrematação pra semana que vem, pro próximo
-              mês, pra “quando der tempo”.
-            </p>
+      <section className="bg-brand-light py-12 sm:py-16">
+        <div className="container-wide">
+          <div className="grid gap-5 md:grid-cols-2">
+            <div className="rounded-3xl border border-brand-border bg-white px-6 py-7">
+              <div className="flex items-center gap-4">
+                <span
+                  aria-hidden
+                  className="grid size-14 shrink-0 place-items-center rounded-full bg-brand-light text-3xl"
+                >
+                  😔
+                </span>
+                <div>
+                  <span className="inline-flex rounded-full bg-brand-on-light/70 px-3.5 py-1 text-xs font-bold text-brand-on-dark">
+                    Opção 1
+                  </span>
+                  <h3 className="mt-2 text-xl text-brand-on-light">
+                    Não comprar seu carro de leilão nunca
+                  </h3>
+                </div>
+              </div>
+              <p className="mt-4 flex gap-2 text-base text-brand-on-light/75">
+                <span aria-hidden>👉</span>
+                <span>
+                  Continuar travado, adiando a sua primeira arrematação pra semana que vem, pro
+                  próximo mês, pra “quando der tempo”.
+                </span>
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-brand-border bg-white px-6 py-7">
+              <div className="flex items-center gap-4">
+                <span
+                  aria-hidden
+                  className="grid size-14 shrink-0 place-items-center rounded-full bg-brand-light text-3xl"
+                >
+                  ✅
+                </span>
+                <div>
+                  <span className="inline-flex rounded-full bg-brand-accent px-3.5 py-1 text-xs font-bold text-brand-on-dark">
+                    Opção 2
+                  </span>
+                  <h3 className="mt-2 text-xl text-brand-on-light">
+                    Copiar e colar o modelo validado
+                  </h3>
+                </div>
+              </div>
+              <p className="mt-4 text-base text-brand-on-light/75">
+                Acessar o aulão ao vivo e fazer sua primeira arrematação ainda esse mês.
+              </p>
+            </div>
           </div>
 
-          <div className="rounded-3xl border-2 border-brand-accent bg-white px-6 py-7">
-            <span className="inline-flex rounded-full bg-brand-accent px-4 py-1.5 text-xs font-bold text-brand-on-dark">
-              Opção 2
-            </span>
-            <h3 className="mt-4 text-xl text-brand-on-light">Copiar e colar o modelo validado</h3>
-            <p className="mt-3 text-base text-brand-on-light/75">
-              Acessar o aulão ao vivo e fazer sua primeira arrematação ainda esse mês.
-            </p>
+          <p className="mt-10 text-center text-[clamp(1.3rem,3.6vw,1.9rem)] font-extrabold text-brand-on-light">
+            Eu sei (e você também sabe):
+            <br />
+            <span className="hl">a opção 2 é a mais inteligente.</span>
+          </p>
+          <p className="mt-4 text-center text-base text-brand-on-light/70">
+            Então clique no botão abaixo e acesse agora mesmo o Mega Aulão ao Vivo sobre Leilões.
+          </p>
+          <div className="mt-7 flex justify-center">
+            <Cta label={offer.ctaPrimary} />
           </div>
         </div>
-
-        <p className="mt-10 text-center text-[clamp(1.2rem,3.4vw,1.75rem)] font-extrabold text-brand-on-dark">
-          Eu sei (e você também sabe): <span className="hl">a opção 2 é a mais inteligente.</span>
-        </p>
-        <p className="mt-4 text-center text-base text-brand-on-dark/70">
-          Então clique no botão abaixo e acesse agora mesmo o Mega Aulão ao Vivo sobre Leilões.
-        </p>
-        <div className="mt-7 flex justify-center">
-          <Cta label={offer.ctaPrimary} />
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
 export function AuthoritySection() {
   return (
-    <section className="bg-white py-14 sm:py-20">
+    <section className="bg-brand-dark py-14 text-brand-on-dark sm:py-20">
       <div className="container-wide grid items-center gap-10 md:grid-cols-2">
         <div>
-          <h2 className="text-[clamp(1.4rem,4vw,2.1rem)] text-brand-on-light">
+          <h2 className="text-[clamp(1.4rem,4vw,2.1rem)]">
             O criador do aulão ao vivo é <span className="hl">Paulo Machado</span>
           </h2>
-          <p className="mt-3 text-lg font-bold text-brand-on-light/80">
+          <p className="mt-3 text-lg font-bold text-brand-on-dark/85">
             De R$ 1 milhão em dívidas a 7 negócios milionários
           </p>
-          <div className="mt-6 flex flex-col gap-4 text-base leading-relaxed text-brand-on-light/75">
+          <div className="mt-6 flex flex-col gap-4 text-base leading-relaxed text-brand-on-dark/75">
             <p>
               Paulo Machado foi de R$ 1 milhão em dívidas para 7 negócios milionários. Hoje é
               arrematante profissional com mais de R$ 100 milhões em arremates.
