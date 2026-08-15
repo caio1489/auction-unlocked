@@ -6,9 +6,9 @@ export function HeaderLogo() {
       <div className="container-wide flex justify-center">
         <img
           src={logoAoVivo.url}
-          alt="Mega Aulão ao Vivo sobre Leilões — hoje 20h01"
-          width={1000}
-          height={511}
+          alt="Mega Aulão ao Vivo sobre Leilões — segunda 20h01"
+          width={1849}
+          height={909}
           loading="eager"
           className="h-[55px] w-auto object-contain sm:h-[73px]"
         />
