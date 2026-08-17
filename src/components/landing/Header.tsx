@@ -1,4 +1,4 @@
-import logoAoVivo from "@/assets/logo-mega-aulao-ao-vivo.png.asset.json";
+import logoAoVivo from "@/assets/logo-mega-aulao-v3.png.asset.json";
 
 export function HeaderLogo() {
   return (
@@ -6,9 +6,9 @@ export function HeaderLogo() {
       <div className="container-wide flex justify-center">
         <img
           src={logoAoVivo.url}
-          alt="Mega Aulão ao Vivo sobre Leilões — segunda 20h01"
-          width={1849}
-          height={909}
+          alt="Mega Aulão ao Vivo sobre Leilões"
+          width={1780}
+          height={683}
           loading="eager"
           className="h-[55px] w-auto object-contain sm:h-[73px]"
         />
