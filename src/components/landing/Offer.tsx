@@ -1,5 +1,5 @@
 import { assets } from "@/lib/landing-assets";
-import logoAoVivo from "@/assets/logo-mega-aulao-ao-vivo.png.asset.json";
+import logoAoVivo from "@/assets/logo-mega-aulao-v3.png.asset.json";
 import { offer } from "@/config/offer";
 import { Cta } from "./Cta";
 import {
