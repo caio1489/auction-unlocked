@@ -5,50 +5,48 @@ import { Cta } from "./Cta";
 
 const START_SEATS = 44;
 const MAX_SEATS = 48;
+const TOTAL_SEATS = 50;
 const RAMP_MS = 150_000; // 2min30s para ir de 44 até 48
-const STEP_MS = RAMP_MS / (MAX_SEATS - START_SEATS);
 
 export function LotesSection() {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [seats, setSeats] = useState(START_SEATS);
-  const lastBump = useRef(0);
-  const seen = useRef(false);
+  const [progress, setProgress] = useState(0); // 0 -> 1 ao longo dos 2min30
+  const started = useRef(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    const bump = () => {
-      setSeats((s) => (s < MAX_SEATS ? s + 1 : s));
-      lastBump.current = Date.now();
-    };
-
-    // sobe 1 vaga sincronizado com a notificação de venda (respeitando o ritmo)
-    const onSale = () => {
-      if (!seen.current) return;
-      if (Date.now() - lastBump.current < STEP_MS) return;
-      bump();
+    let raf = 0;
+    const tick = (start: number) => {
+      const loop = () => {
+        const t = Math.min(1, (Date.now() - start) / RAMP_MS);
+        setProgress(t);
+        if (t < 1) raf = requestAnimationFrame(loop);
+      };
+      loop();
     };
 
     const io = new IntersectionObserver(
       (entries) => {
-        if (entries.some((e) => e.isIntersecting) && !seen.current) {
-          seen.current = true;
-          bump(); // ao entrar na área de preço, sobe 1 vaga na hora
+        if (entries.some((e) => e.isIntersecting) && !started.current) {
+          started.current = true;
+          tick(Date.now());
         }
       },
       { threshold: 0.35 },
     );
     io.observe(el);
-    window.addEventListener("sale-notification", onSale);
 
     return () => {
       io.disconnect();
-      window.removeEventListener("sale-notification", onSale);
+      cancelAnimationFrame(raf);
     };
   }, []);
 
-  const pct = Math.round((seats / MAX_SEATS) * 100);
+  const filled = START_SEATS + progress * (MAX_SEATS - START_SEATS);
+  const seats = Math.min(MAX_SEATS, Math.floor(filled));
+  const pct = (filled / TOTAL_SEATS) * 100;
 
   return (
     <section className="bg-brand-on-light py-12 text-brand-on-dark sm:py-16">
@@ -114,15 +112,26 @@ export function LotesSection() {
           </div>
 
           <div className="mt-6">
-            <div className="h-2.5 w-full overflow-hidden rounded-full bg-white/12">
+            <div
+              role="progressbar"
+              aria-valuemin={0}
+              aria-valuemax={TOTAL_SEATS}
+              aria-valuenow={seats}
+              className="h-2.5 w-full overflow-hidden rounded-full bg-white/12"
+            >
               <div
-                className="h-full rounded-full bg-linear-to-r from-brand-accent to-brand-accent-strong transition-all duration-1000 ease-out"
+                className="relative h-full overflow-hidden rounded-full bg-linear-to-r from-brand-accent to-brand-accent-strong"
                 style={{ width: `${pct}%` }}
-              />
+              >
+                <span
+                  aria-hidden
+                  className="absolute inset-0 animate-[progress-shine_1.6s_linear_infinite] bg-linear-to-r from-transparent via-white/45 to-transparent"
+                />
+              </div>
             </div>
             <p className="mt-3 text-center text-sm font-semibold text-brand-on-dark/85 sm:text-base">
               <span className="text-lg font-extrabold text-brand-accent sm:text-xl">{seats}</span>{" "}
-              {seats === 1 ? "pessoa comprou" : "pessoas compraram"} de 48 vagas
+              {seats === 1 ? "pessoa comprou" : "pessoas compraram"} de {TOTAL_SEATS} vagas
             </p>
           </div>
 

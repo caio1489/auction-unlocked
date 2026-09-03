@@ -1,5 +1,4 @@
-import { assets } from "@/lib/landing-assets";
-import { offer } from "@/config/offer";
+import logoMiniCurso from "@/assets/logo-mini-curso-arremate.png.asset.json";
 
 const faqs = [
   ["Qual é a forma de pagamento?", "Você pode fazer o pagamento pelo PIX ou cartão de crédito."],
@@ -51,8 +50,8 @@ export function LegalFooter() {
     <footer className="bg-brand-dark py-12 text-brand-on-dark">
       <div className="container-reading flex flex-col items-center gap-5 text-center">
         <img
-          src={assets["Logo sem fundo da pagina.png"]}
-          alt="Logo Mega Aulão ao Vivo sobre Leilões"
+          src={logoMiniCurso.url}
+          alt="Mini Curso Meu Primeiro Arremate"
           loading="lazy"
           width={220}
           height={70}
@@ -64,7 +63,8 @@ export function LegalFooter() {
           de aplicação, contexto e condições de cada leilão.
         </p>
         <p className="text-xs text-brand-on-dark/50">
-          © {new Date().getFullYear()} {offer.productName}. Todos os direitos reservados.
+          © {new Date().getFullYear()} Mini Curso Meu Primeiro Arremate. Todos os direitos
+          reservados.
         </p>
       </div>
     </footer>
