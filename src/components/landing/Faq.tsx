@@ -1,5 +1,4 @@
-import { assets } from "@/lib/landing-assets";
-import { offer } from "@/config/offer";
+import logoMiniCurso from "@/assets/logo-mini-curso-arremate.png.asset.json";
 
 const faqs = [
   ["Qual é a forma de pagamento?", "Você pode fazer o pagamento pelo PIX ou cartão de crédito."],
