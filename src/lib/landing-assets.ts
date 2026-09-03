@@ -1,5 +1,5 @@
 import logo from "@/assets/logo.png.asset.json";
-import heroMacbook from "@/assets/hero-macbook-amanha-20h01.webp.asset.json";
+import heroMacbook from "@/assets/hero-macbook-mini-curso.png.asset.json";
 import todosEntregaveis from "@/assets/todos-entregaveis.png.asset.json";
 import expert1 from "@/assets/expert-1.jpg.asset.json";
 import expert2 from "@/assets/expert-2.jpg.asset.json";
@@ -9,7 +9,7 @@ import resGol from "@/assets/resultado-gol.webp.asset.json";
 import resJardim from "@/assets/resultado-jardim-paulista.webp.asset.json";
 import resRibeirao from "@/assets/resultado-ribeirao-preto.webp.asset.json";
 import resBmw from "@/assets/resultado-bmw.webp.asset.json";
-import ent10Sites from "@/assets/ent-10-sites.png.asset.json";
+import entImovel5 from "@/assets/ent-imovel-5-entrada.png.asset.json";
 import entGuia from "@/assets/ent-guia.png.asset.json";
 import entParcelado from "@/assets/ent-parcelado.webp.asset.json";
 import entLeilaoFalso from "@/assets/ent-leilao-falso.png.asset.json";
@@ -33,7 +33,7 @@ export const assets = {
   "apto jardim paulista.webp": resJardim.url,
   "apto ribeirao preto.webp": resRibeirao.url,
   "bmw.webp": resBmw.url,
-  "entregavel-10-sites-titulo.png": ent10Sites.url,
+  "entregavel-imovel-5-entrada.png": entImovel5.url,
   "entregavel-guia-titulo.png": entGuia.url,
   "0SIWZnkc3Wu6WzlGdePSEF-img-1_1786639691000_na1fn_ZW50cmVnYXZlbC1jb21wcmFyLXBhcmNlbGFkby1ib2xldG8tbGVpbGFv.webp":
     entParcelado.url,

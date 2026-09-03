@@ -79,7 +79,7 @@ export function BenefitsSection() {
     <section className="relative bg-brand-light pb-20 pt-14 sm:pt-20">
       <div className="container-wide">
         <h2 className="text-center text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
-          Com um <span className="hl">aulão ao vivo</span> você vai
+          Com o <span className="hl">mini curso meu primeiro arremate</span> você vai
         </h2>
         <div className="mx-auto mt-8 grid max-w-[730px] gap-4 sm:grid-cols-2">
           {benefits.map(({ icon: Icon, text }) => (
