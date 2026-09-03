@@ -112,15 +112,26 @@ export function LotesSection() {
           </div>
 
           <div className="mt-6">
-            <div className="h-2.5 w-full overflow-hidden rounded-full bg-white/12">
+            <div
+              role="progressbar"
+              aria-valuemin={0}
+              aria-valuemax={TOTAL_SEATS}
+              aria-valuenow={seats}
+              className="h-2.5 w-full overflow-hidden rounded-full bg-white/12"
+            >
               <div
-                className="h-full rounded-full bg-linear-to-r from-brand-accent to-brand-accent-strong transition-all duration-1000 ease-out"
+                className="relative h-full overflow-hidden rounded-full bg-linear-to-r from-brand-accent to-brand-accent-strong"
                 style={{ width: `${pct}%` }}
-              />
+              >
+                <span
+                  aria-hidden
+                  className="absolute inset-0 animate-[progress-shine_1.6s_linear_infinite] bg-linear-to-r from-transparent via-white/45 to-transparent"
+                />
+              </div>
             </div>
             <p className="mt-3 text-center text-sm font-semibold text-brand-on-dark/85 sm:text-base">
               <span className="text-lg font-extrabold text-brand-accent sm:text-xl">{seats}</span>{" "}
-              {seats === 1 ? "pessoa comprou" : "pessoas compraram"} de 48 vagas
+              {seats === 1 ? "pessoa comprou" : "pessoas compraram"} de {TOTAL_SEATS} vagas
             </p>
           </div>
 
