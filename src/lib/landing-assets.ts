@@ -15,6 +15,7 @@ import entParcelado from "@/assets/ent-parcelado.webp.asset.json";
 import entLeilaoFalso from "@/assets/ent-leilao-falso.png.asset.json";
 import entCarros from "@/assets/ent-carros.png.asset.json";
 import entImoveis from "@/assets/ent-imoveis-desocupados.png.asset.json";
+import entArrematarImovel5 from "@/assets/entregavel-arrematar-imovel-5-por-cento-refinado_1.png.asset.json";
 import doresObjecoes from "@/assets/dores-objecoes.png.asset.json";
 
 /**

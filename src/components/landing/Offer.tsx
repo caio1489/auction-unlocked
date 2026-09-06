@@ -66,7 +66,7 @@ export function FinalPitchSection() {
 }
 
 const stack = [
-  ["10 sites de leilão: na sua mão", "R$ 47"],
+  ["Como arrematar um imóvel com 5% de entrada", "R$ 97"],
   ["Guia para identificar boas oportunidades", "R$ 67"],
   ["Como identificar se um leilão é falso", "R$ 47"],
   ["Como comprar carros sem batida", "R$ 97"],
