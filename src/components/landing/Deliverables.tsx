@@ -2,10 +2,10 @@ import { assets } from "@/lib/landing-assets";
 
 const deliverablesA = [
   {
-    src: assets["entregavel-imovel-5-entrada.png"],
-    alt: "Entregável sobre como arrematar um imóvel com 5% de entrada",
-    title: "Como arrematar um imóvel com 5% de entrada",
-    desc: "O caminho completo para dar apenas 5% de entrada no imóvel e parcelar o restante, sem precisar de financiamento bancário.",
+    src: assets["entregavel-10-sites-titulo.png"],
+    alt: "Entregável com os 10 sites de leilão validados",
+    title: "10 sites de leilão: na sua mão",
+    desc: "Analisados e validados por advogados para você não ter dor de cabeça.",
   },
   {
     src: assets["entregavel-guia-titulo.png"],
@@ -82,7 +82,7 @@ export function DeliverablesSection() {
           E tem mais…
         </span>
         <h2 className="mt-5 text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
-          Veja tudo que você vai receber no <span className="hl">mini curso meu primeiro arremate</span>
+          Veja tudo que você vai receber <span className="hl">ao vivo</span>
         </h2>
       </div>
       <DeliverableCards items={deliverablesA} />

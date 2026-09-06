@@ -1,5 +1,5 @@
 import { assets } from "@/lib/landing-assets";
-import logoAoVivo from "@/assets/logo-mini-curso-arremate.png.asset.json";
+import logoAoVivo from "@/assets/logo-mega-aulao-v3.png.asset.json";
 import { offer } from "@/config/offer";
 import { Cta } from "./Cta";
 import {
@@ -29,7 +29,7 @@ export function AudienceFitSection() {
       <div className="container-wide">
         <div className="rounded-[32px] bg-[#1b1a1a] px-6 py-10 shadow-[0_30px_60px_-40px_rgba(0,0,0,0.9)] sm:px-12 sm:py-12">
           <h2 className="text-center text-[clamp(1.6rem,5.4vw,2.1rem)]">
-            Esse <span className="hl">mini curso</span> é para você que:
+            Esse <span className="hl">aulão ao vivo</span> é para você que:
           </h2>
           <ul className="mx-auto mt-8 flex max-w-[820px] flex-col gap-4">
             {audience.map((a) => (
@@ -58,7 +58,7 @@ export function FinalPitchSection() {
         </span>
         <p className="mx-auto mt-4 max-w-[620px] text-[clamp(1.4rem,4.4vw,2.1rem)] font-extrabold leading-tight">
           Se você quer destravar sua primeira arrematação ainda esse mês, esse{" "}
-          <span className="hl">mini curso é pra você.</span>
+          <span className="hl">aulão ao vivo é pra você.</span>
         </p>
       </div>
     </section>
@@ -81,7 +81,7 @@ export function OfferStackSection() {
       <div className="container-reading">
         <h2 className="text-center text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
           Recapitulando tudo que você vai receber com o{" "}
-          <span className="hl">mini curso sobre leilão</span>
+          <span className="hl">aulão ao vivo sobre leilão</span>
         </h2>
 
         <div className="mt-8 overflow-hidden rounded-[28px] border-2 border-brand-border bg-white shadow-[0_28px_60px_-42px_rgba(0,0,0,0.45)]">
@@ -121,7 +121,7 @@ export function OfferStackSection() {
         </div>
 
         <p className="mt-8 text-center text-[clamp(1.15rem,3.2vw,1.55rem)] font-extrabold text-brand-on-light">
-          Mas, somente hoje, você pode ter acesso ao mini curso sobre leilões por um valor muito
+          Mas, somente hoje, você pode ter acesso ao mega aulão sobre leilões por um valor muito
           mais acessível:
         </p>
       </div>
@@ -146,7 +146,7 @@ export function OfferCardSection({ id, ctaLabel }: { id?: string; ctaLabel: stri
           <div className="flex flex-col items-center text-center">
             <img
               src={logoAoVivo.url}
-              alt="Mini Curso Meu Primeiro Arremate"
+              alt="Mega Aulão ao Vivo sobre Leilões — hoje 20h01"
               loading="lazy"
               width={1000}
               height={511}
@@ -208,7 +208,7 @@ export function AccessStepsSection() {
     <section className="bg-brand-light py-14 sm:py-20">
       <div className="container-wide">
         <h2 className="text-center text-[clamp(1.6rem,5.4vw,2.1rem)] text-brand-on-light">
-          Como funciona o seu acesso ao Mini curso
+          Como funciona o seu acesso ao aulão
         </h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {steps.map(({ icon: Icon, title, desc }) => (
@@ -254,7 +254,7 @@ export function ChoiceSection() {
                     Opção 1
                   </span>
                   <h3 className="mt-2 text-xl text-brand-on-light">
-                    Não comprar seu imóvel ou carro de leilão nunca
+                    Não comprar seu carro de leilão nunca
                   </h3>
                 </div>
               </div>
@@ -289,7 +289,7 @@ export function ChoiceSection() {
                 </div>
               </div>
               <p className="mt-4 text-base text-brand-on-light/75">
-                Acessar o mini curso e fazer sua primeira arrematação ainda esse mês.
+                Acessar o aulão ao vivo e fazer sua primeira arrematação ainda esse mês.
               </p>
             </div>
           </div>
@@ -300,7 +300,7 @@ export function ChoiceSection() {
             <span className="hl">a opção 2 é a mais inteligente.</span>
           </p>
           <p className="mt-4 text-center text-base text-brand-on-light/70">
-            Então clique no botão abaixo e acesse agora mesmo o mini curso meu primeiro arremate.
+            Então clique no botão abaixo e acesse agora mesmo o Mega Aulão ao Vivo sobre Leilões.
           </p>
           <div className="mt-7 flex justify-center">
             <Cta label={offer.ctaPrimary} />

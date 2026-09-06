@@ -4,7 +4,7 @@
  */
 export const offer = {
   productName: "Mega Aulão ao Vivo sobre Leilões",
-  shortName: "Mini curso",
+  shortName: "Mega aulão ao vivo",
   expert: "Paulo Machado",
   liveLabel: "Aula ao vivo",
   liveTime: "Hoje 20h01",

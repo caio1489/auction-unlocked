@@ -92,7 +92,6 @@ export function SalesNotifications() {
 
     const show = () => {
       setVisible(true);
-      window.dispatchEvent(new Event("sale-notification"));
       shown += 1;
       timer = setTimeout(() => {
         setVisible(false);
@@ -124,7 +123,7 @@ export function SalesNotifications() {
           <Check aria-hidden className="size-4" strokeWidth={3} />
         </span>
         <p className="text-sm leading-snug">
-          <span className="font-extrabold">{name}</span>, de {city}, garantiu vaga no mini curso
+          <span className="font-extrabold">{name}</span>, de {city}, garantiu vaga no aulão
         </p>
       </div>
     </div>
