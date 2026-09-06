@@ -2,10 +2,10 @@ import { assets } from "@/lib/landing-assets";
 
 const deliverablesA = [
   {
-    src: assets["entregavel-10-sites-titulo.png"],
-    alt: "Entregável com os 10 sites de leilão validados",
-    title: "10 sites de leilão: na sua mão",
-    desc: "Analisados e validados por advogados para você não ter dor de cabeça.",
+    src: assets["entregavel-arrematar-imovel-5-por-cento-refinado_1.png"],
+    alt: "Entregável sobre como arrematar um imóvel com 5% de entrada",
+    title: "Como arrematar um imóvel com 5% de entrada",
+    desc: "Descubra a estratégia validada para arrematar imóveis pagando apenas 5% de entrada e parcelar o restante no boleto.",
   },
   {
     src: assets["entregavel-guia-titulo.png"],
