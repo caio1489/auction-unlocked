@@ -1,5 +1,5 @@
 import logo from "@/assets/logo.png.asset.json";
-import heroMacbook from "@/assets/hero-macbook-amanha-20h01.webp.asset.json";
+import heroMacbook from "@/assets/hero-macbook-v2.png.asset.json";
 import todosEntregaveis from "@/assets/todos-entregaveis.png.asset.json";
 import expert1 from "@/assets/expert-1.jpg.asset.json";
 import expert2 from "@/assets/expert-2.jpg.asset.json";
