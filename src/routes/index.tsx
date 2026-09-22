@@ -30,7 +30,7 @@ import { offer } from "@/config/offer";
 
 const title = "Mega Aulão ao Vivo sobre Leilões — Paulo Machado";
 const description =
-  "Copie a estratégia para comprar imóveis e veículos no leilão com 25% de entrada + 60x no boleto e até 60% de desconto. Aula ao vivo hoje 20h01 por R$ 29,90.";
+  "Copie a estratégia para comprar imóveis e veículos no leilão com 25% de entrada + 60x no boleto e até 60% de desconto. Aula ao vivo hoje 20h01 por R$ 37,90.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
