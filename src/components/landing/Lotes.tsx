@@ -39,8 +39,8 @@ export function LotesSection() {
               </span>
               <p className="mt-3 leading-none text-brand-accent">
                 <span className="text-sm font-bold sm:text-base">R$ </span>
-                <span className="text-[clamp(1.6rem,8vw,2.6rem)] font-extrabold">29</span>
-                <span className="align-super text-xs font-bold sm:text-sm">,00</span>
+                <span className="text-[clamp(1.6rem,8vw,2.6rem)] font-extrabold">37</span>
+                <span className="align-super text-xs font-bold sm:text-sm">,90</span>
               </p>
               <p className="mt-2 text-[11px] font-semibold text-brand-on-dark/80 sm:text-sm">
                 à vista no PIX
@@ -79,7 +79,7 @@ export function LotesSection() {
             </div>
             <p className="mt-3 text-center text-sm font-semibold text-brand-on-dark/85 sm:text-base">
               <span className="text-lg font-extrabold text-brand-accent sm:text-xl">83%</span> dos
-              ingressos vendidos a R$ 29,00
+              ingressos vendidos a R$ 37,90
             </p>
           </div>
 
